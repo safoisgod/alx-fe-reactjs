@@ -21,9 +21,9 @@ function App() {
 
       <h1>User Profiles</h1>
       <UserProfile
-        name = "Nana Kwesi"
-        age = "42"
-        bio = "Loves to code in Python"/>
+        name = "Alice"
+        age = "25"
+        bio = "Loves hiking and photography"/>
       
       <UserProfile
         name = "Ama Tina"
