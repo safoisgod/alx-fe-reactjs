@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const UserProfile = (props) => {
    return (
      <div>
@@ -7,6 +9,12 @@ const UserProfile = (props) => {
      </div>
    );
  };
+
+ UserProfile.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  bio: PropTypes.string.isRequired,
+};
 
 
  export default UserProfile

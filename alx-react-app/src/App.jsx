@@ -20,15 +20,16 @@ function App() {
       <Footer />
 
       <h1>User Profiles</h1>
-      <UserProfile
-        name = "Alice"
-        age = "25"
-        bio = "Loves hiking and photography"/>
-      
-      <UserProfile
-        name = "Ama Tina"
-        age = "19"
-        bio = "Always in the kitchn cooking the best meal you've ever tasted"/>
+      <UserProfile 
+        name="Alice" 
+        age="25" 
+        bio="Loves hiking and photography" 
+      />
+      <UserProfile 
+        name="Bob" 
+        age="30" 
+        bio="Enjoys coding and playing video games" 
+      />
       
 
     </>
