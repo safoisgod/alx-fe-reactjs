@@ -1,24 +1,14 @@
-// import axios from "axios";
-
-// const BASE_URL = "https://api.github.com/users/";
-
-// export async function fetchUserData(username) {
-//   const response = await axios.get(`${BASE_URL}${username}`);
-//   return response.data;
-// }
-
-
 import axios from "axios";
 
-const SEARCH_URL = "https://api.github.com/search/users";
-const url = "https://api.github.com/search/users?q"
+export const fetchUserData = async (username, location, repos) => {
+  const query = `q=${username ? username : ""}${
+    location ? `+location:${location}` : ""
+  }${repos ? `+repos:>=${repos}` : ""}`;
 
-export async function searchUsers({ username, location, minRepos }) {
-  let query = username ? `${username} in:login` : "";
+  const response = await axios.get(
+    `https://api.github.com/search/users?${query}`
+  );
 
-  if (location) query += ` location:${location}`;
-  if (minRepos) query += ` repos:>=${minRepos}`;
+  return response.data.items;
+};
 
-  const response = await axios.get(`${SEARCH_URL}?q=${query}`);
-  return response.data.items; // returns array of users
-}
