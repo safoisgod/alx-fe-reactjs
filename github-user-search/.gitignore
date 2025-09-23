@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-.env
 dist-ssr
 *.local
 
@@ -23,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# gitignore
+.env
+
+
+#Another one
+
+.password
